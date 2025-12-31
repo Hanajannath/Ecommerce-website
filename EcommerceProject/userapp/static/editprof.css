@@ -1,0 +1,55 @@
+.all{
+    padding-left: 50px;
+    background-color: rgb(248, 251, 254);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width:250px;
+}
+body{
+    padding-top: 150px;
+    background-color: rgb(237, 239, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input{
+    
+    padding: 5px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+form textarea{
+    
+    border-radius: 10px;
+    background-color: aliceblue;
+    padding:5px;
+}
+form button{
+   padding-left: 5px;
+   margin-bottom: 10px;
+   margin-left: 70px;
+   border: none;
+   border-radius: 5px;
+   background-color: rgb(51, 86, 174);
+   color: aliceblue;
+   padding: 10px;
+}
+.navbar-text{
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    font-size:40px;
+    color: black;
+}
+.navbar a{
+    margin-right: 5px;
+    padding-top: 18px;
+    color: rgb(1, 1, 1) !important;
+    font-size: 20px;
+}
+h1{
+    padding: 5px;
+    padding-left: 20px;
+}

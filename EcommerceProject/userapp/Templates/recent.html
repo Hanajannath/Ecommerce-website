@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}recent{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'recent.css' %}">{% endblock %}
+{% block content %}
+<div class="all">
+<h2>Recently Viewed Products</h2>
+
+{% if products %}
+    {% for p in products %}
+        <div>
+            <h4>{{ p.name }}</h4>
+            <p>₹ {{ p.price }}</p>
+            <a href="{% url 'product_detail' p.id %}">View</a>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No recently viewed products.</p>
+{% endif %}
+</div>
+{% endblock %}

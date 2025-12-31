@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+{% block title %}Register{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'register.css' %}">
+{% endblock %}
+{% block content %} 
+    <div class="all">
+        <div class="box">
+    <h1>  REGISTRATION</h1>
+     
+    <form action="" method="post">
+        {% csrf_token %}
+        {% if form.errors %}
+                <div class="error-box">
+                    {{ form.errors }}
+                </div>
+            {% endif %}
+        <label>Username:</label>
+        {{ form.username }}
+<br>
+        <label>Email:</label>
+        {{ form.email }} 
+        <br>
+        <label>Password:</label>
+        {{ form.password }}
+        <br>
+        <label>Confirm password:</label>
+        {{ form.confirm_password }}
+        <input type="submit" value="Register">
+    </form>
+    </div>
+    </div>
+{% endblock %}

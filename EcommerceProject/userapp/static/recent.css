@@ -1,0 +1,16 @@
+.all{
+    padding-top: 50px;
+}
+.navbar a{
+    margin-right: 5px;
+    padding-top: 18px;
+    color: rgb(1, 1, 1) !important;
+    font-size: 20px;
+}
+.navbar-text{
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    font-size:40px;
+    color: black;
+}

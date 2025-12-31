@@ -1,0 +1,38 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.navbar a{
+    margin-right: 5px;
+    padding-top: 18px;
+    color: rgb(1, 1, 1) !important;
+    font-size: 20px;
+}
+.navbar-text{
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    font-size:40px;
+    color: black;
+}
+.all{
+    height:200px;
+    padding: 90px;
+    background-color: rgb(250, 250, 250);
+    padding-top:20px;
+    margin-top: 140px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+button a{
+    border: none;
+    background-color: rgb(19, 68, 173);
+
+}
+a{
+    
+    color: aliceblue;
+    text-decoration: none;
+    
+}

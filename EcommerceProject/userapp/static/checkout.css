@@ -1,0 +1,52 @@
+body{
+    background-image: url('checkout.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:90vh;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.all{
+    display: flex;
+    padding: 20px;
+    background-color: rgba(246, 246, 246, 0.7) !important; /* 20% transparent */
+    backdrop-filter: blur(6px);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width:800px;
+  
+    border-radius: 10px;
+     height: 540px;
+
+}
+.table{
+ flex-wrap: wrap;
+    width: 100%;
+    max-width: 700px;
+    padding-bottom: 90px;
+     line-height: 1.6;
+     background-color: rgb(190, 216, 245);
+    border-color: rgb(5, 5, 137);
+    text-align: center;
+    border-radius: 10px;
+    border-width: 3px;
+}
+.navbar-text{
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    font-size:40px;
+    color: black;
+}
+.navbar a{
+    margin-right: 5px;
+    padding-top: 18px;
+    color: rgb(1, 1, 1) !important;
+    font-size: 20px;
+}
+.navbar{
+    background-color: rgb(198, 194, 194);
+}

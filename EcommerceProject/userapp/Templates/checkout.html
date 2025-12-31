@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Register{% endblock %}
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'checkout.css' %}">
+{% endblock %}
+{% block content %} 
+<div class="all">
+<h1>CHECKOUT</h1>
+<div class="">
+<table class="table" border="2px">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for p in products %}
+        <tr>
+            <td>{{ p.name }}</td>
+            <td>₹ {{ p.price }}</td>
+            <td>{{ p.qty }}</td>
+            <td>₹ {{ p.subtotal }} </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+<h3>Total: ₹ {{ total }}</h3>
+
+<a href="{% url 'placecartorder' %}" class="btn btn-success">Place Order</a>
+</div>
+{% endblock %}

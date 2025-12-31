@@ -1,0 +1,42 @@
+body{
+    background-image: url('home.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:90vh;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.des{
+    display: flex;
+    padding: 20px;
+    background-color: rgba(246, 246, 246, 0.7) !important; /* 20% transparent */
+    backdrop-filter: blur(6px);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width:800px;
+  
+    border-radius: 10px;
+     height: 540px;
+
+}
+.in{
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 700px;
+    padding-bottom: 90px;
+     line-height: 1.6;
+   
+}
+.des p{
+    font-family :Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+.des .title{
+     text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

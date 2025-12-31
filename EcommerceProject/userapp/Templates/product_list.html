@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+    <link rel="stylesheet" href="{% static 'manproduct.css' %}">
+</head>
+
+<body>
+    <nav>
+    <a href="{% url 'home' %}">home</a>
+    <a href="{% url 'logout' %}">logout</a>
+</nav>
+<div>
+<h2>Products</h2>
+<div >
+<button class="add"><a href="{% url 'create_product' %}">Add New Product</a></button>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Actions</th>
+    </tr>
+    {% for product in products %}
+    <tr>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.stock }}</td>
+        <td>
+            <a href="{% url 'update_product' product.id %}">Edit</a> |
+            <a href="{% url 'delete_product' product.id %}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}</div>
+</table><br>
+<button><a href="{% url 'admin_dashboard' %}">Back </a></button></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Orders</title>
+    <link rel="stylesheet" href="{% static 'manorder.css' %}">
+</head>
+<body><nav>
+    <a href="{% url 'home' %}">home</a>
+    <a href="{% url 'logout' %}">logout</a>
+</nav>
+    <div class="all">
+<h2>Manage Orders</h2>
+<div class="in">
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Order ID</th>
+        <th>User</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>Actions</th>
+    </tr>
+    {% for order in orders %}
+    <tr>
+        <td>{{ order.id }}</td>
+        <td>{{ order.user.username }}</td>
+        <td>{{ order.status }}</td>
+        <td>{{ order.order_date }}</td>
+        <td>
+            <a href="{% url 'update_order_status' order.id %}">Update</a> |
+            <a href="{% url 'delete_order' order.id %}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}</div>
+</table></div><br>
+<button><a href="{% url 'admin_dashboard' %}">Back </a></button>
+
+</body>
+</html>

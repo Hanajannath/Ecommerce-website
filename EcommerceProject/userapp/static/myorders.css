@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(104, 128, 169);
+}
+.table,th,td{
+
+    border-width: 2px;
+    border: 1px solid black;
+    border-collapse:separate;
+    background-color: rgb(203, 203, 224);
+    
+}
+.all{
+    padding-top:60px;
+}
+.navbar-text{
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    font-size:40px;
+    color: black;
+}
+.navbar a{
+    margin-right: 5px;
+    padding-top: 18px;
+    color: rgb(1, 1, 1) !important;
+    font-size: 20px;
+}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}My Orders{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'myorders.css' %}">
+{% endblock %}
+{% block content %}
+<div class="all">
+<h1>My Orders</h1>
+
+{% if order_details %}
+    {% for od in order_details %}
+        <h3>Order #{{ od.order.id }} - {{ od.order.order_date }}</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in od.products %}
+                <tr style="text-align: center;">
+                    <td>{{ item.product.name }}</td>
+                    <td>₹ {{ item.product.price }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>₹ {{ item.product.price|floatformat:2|add:"0"|safe }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <hr>
+    {% endfor %}
+{% else %}
+    <p>You have no orders yet.</p>
+{% endif %}</div>
+{% endblock %}

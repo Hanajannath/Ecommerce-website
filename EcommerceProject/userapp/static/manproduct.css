@@ -1,0 +1,38 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(186, 215, 255);
+}
+
+h2{
+    margin-left: 120px;
+    padding-top: 110px;
+}
+table{
+    border-radius: 10px;
+    background-color:rgb(225, 232, 240);
+    border: 1px solid #0f0d0d;
+    border-collapse: collapse;
+}
+table th, table td{
+    border: 1px solid #111010;
+    padding: 8px;
+    
+}
+button{
+    padding: 10px;
+     border-radius: 10px;
+     background-color: rgb(43, 87, 192);
+     border: none;
+}
+button a{
+    padding-top: 20px;
+    
+    color: aliceblue;
+    text-decoration: none;
+    
+}
+.add{
+    background-color: rgb(31, 99, 76);
+    margin-bottom: 10px;
+}

@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'dash.css' %}">
+</head>
+<body>
+    <nav>
+    <a href="{% url 'home' %}">home</a>
+    <a href="{% url 'logout' %}">logout</a>
+</nav>
+<div class="all">
+    <h1>Admin Dashboard</h1>
+    <div class="in">
+   <button> <a href="{% url 'manage_orders' %}">Manage Orders</a></button><br>
+<button><a href="{% url 'product_list' %}">Manage Products</a></button>
+</div></div>
+</body>
+</html>

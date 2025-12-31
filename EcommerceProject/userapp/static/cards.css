@@ -1,0 +1,42 @@
+body{
+    background-image: url('products.jpg') !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+}
+.navbar-text{
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    font-size:40px;
+    color: black;
+}
+.navbar.bg-body-tertiary {
+    background-color: rgba(255, 255, 255, 0.7) !important; /* 20% transparent */
+    backdrop-filter: blur(6px); /* Optional: glass effect */
+   height:90px;
+   border-radius: 5px;
+    margin-left: 9px;
+    margin-right: 9px;
+    margin-top: 7px;
+   
+}
+
+.contain{
+    background-color: rgb(220, 222, 232);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width:900px;
+    height: 950px;
+    margin-left: 700px;
+    padding-top: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.navbar a{
+    margin-right: 5px;
+    padding-top: 18px;
+    color: rgb(1, 1, 1) !important;
+    font-size: 20px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 90%;
+            margin: auto;
+            border-collapse: collapse;
+            background: #fff;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #343a40;
+            color: #fff;
+        }
+
+        img {
+            width: 80px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .total {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            padding: 6px 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .remove {
+            background: #dc3545;
+        }
+
+        .checkout {
+            background: #28a745;
+            float: right;
+            margin-top: 10px;
+        }
+
+        .empty {
+            text-align: center;
+            font-size: 18px;
+            color: #777;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Your Shopping Cart</h2>
+
+{% if products %}
+<table>
+    <tr>
+        <th>Image</th>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+        <th>Action</th>
+    </tr>
+
+    {% for product in products %}
+    <tr>
+        <td>
+            {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            {% else %}
+                No Image
+            {% endif %}
+        </td>
+        <td>{{ product.name }}</td>
+        <td>₹ {{ product.price }}</td>
+        <td>{{ product.qty }}</td>
+        <td>₹ {{ product.subtotal }}</td>
+        <td>
+            <a href="{% url 'remove_from_cart' product.id %}" class="btn remove">
+                Remove
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<div class="total">
+    Total Amount: ₹ {{ total }}
+    <br><br>
+    <a href="{% url 'checkout' %}" class="btn checkout">Proceed to Checkout</a>
+</div>
+
+{% else %}
+    <p class="empty">Your cart is empty 🛒</p>
+{% endif %}
+
+</body>
+</html>

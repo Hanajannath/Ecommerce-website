@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Order Status</title>
+</head>
+<body>
+
+<h2>Update Order #{{ order.id }}</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <label>Status:</label>
+    <select name="status">
+        <option value="pending">Pending</option>
+        <option value="shipped">Shipped</option>
+        <option value="delivered">Delivered</option>
+    </select>
+    <br><br>
+    <button type="submit">Update</button>
+</form>
+
+</body>
+</html>

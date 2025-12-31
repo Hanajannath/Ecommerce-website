@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Login{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'login.css' %}">
+{% endblock %}
+{% block content %} 
+    <div class="all">
+    <h1>USER LOGIN</h1>
+    <div class="in">
+    <form action="" method="post" autocomplete="off">
+        {% csrf_token %}
+        <label>Username:</label>
+        <input type="text" name="username" autocomplete="off"><br>
+        <label>Password:</label>
+        <input type="password" name="password" autocomplete="off"><br>
+       <input type="submit" value="Login">
+    </div>
+    <p>Forgot to <a href="{% url 'register' %}">Register</a>?</p>
+    </form>
+    {% if messages %}
+    {% for msg in messages %}
+        <div class="alert">{{ msg }}</div></div>
+    {% endfor %}
+{% endif %}
+{% endblock %}

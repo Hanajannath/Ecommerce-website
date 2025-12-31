@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}card view{% endblock %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'order_success.css' %}">
+{% endblock %}
+{% block content %}
+<div class="cover">
+    <div class="in">
+<h1>Order Placed Successfully!</h1>
+<p>Thank you for your purchase.</p>
+<a href="{% url 'cards' %}" class="btn btn-primary">Back to Products</a>
+</div></div>
+{% endblock %}

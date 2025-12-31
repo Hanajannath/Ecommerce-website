@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'adminapp',
     'userapp',
-    'widget_tweaks',
+    
 
 ]
 

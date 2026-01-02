@@ -1,38 +1,57 @@
 body{
-    background-image: url('welcome.jpg');
+    background: #f5f5f5;
+    font-family: Arial, sans-serif;
+    /* background-image: url('welcome.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh; 
+    height: 100vh;  */
       
 }
-.container{
-    background-color: rgba(255, 255, 255, 0.7) !important; /* 20% transparent */
-    backdrop-filter: blur(6px);
-   
-    width: 450px;  /* must give width */
+/* .container{ */
+    /* background-color: rgba(255, 255, 255, 0.7) !important; /* 20% transparent */
+    /* backdrop-filter: blur(6px); */
+    
+    /* width: 450px;  must give width
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;  /* horizontal center */
-    align-items: center;      /* vertical center */
-    min-height: 50vh;
+    flex-wrap: wrap; */
+    /* justify-content: center;  horizontal center */
+    /* align-items: center;      vertical center */
+    /* min-height: 50vh;
     padding: 20px; 
     margin-top: 180px;
     margin-left: 690px;
-    border-radius: 10px;
+    border-radius: 10px; */
 
     /* prevents overflow on small screens */
-}
+/* } */
 
 .box {
     width: 100%;
-    max-width: 190px;    /* adjust as needed */  
-    border-radius: 15px;
+    max-width: 360px;    /* adjust as needed */  
+    background: white;
 }
-.Register{
+/* .Register{
     cursor: pointer;
     background: rgb(149, 162, 194);
     border: none;
     padding: 15px 40px;
     border-radius: 10px;
+} */
+ h1 {
+    font-size: 2rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .box {
+        max-width: 420px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .box {
+        max-width: 500px;
+    }
 }

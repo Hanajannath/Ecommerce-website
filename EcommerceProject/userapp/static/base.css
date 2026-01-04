@@ -20,7 +20,7 @@
     font-weight: bold;
     text-decoration: none;
 }
-/* .navbar {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,14 +32,14 @@
     left: 0;
     z-index: 1000; 
     height: 45px;
-} */
+}
 
-/* .nav-logo a {
+.nav-logo a {
     color: #fff;
     font-size: 22px;
     font-weight: bold;
     text-decoration: none;
-} */
+}
 
 .nav-links {
     list-style: none;
@@ -86,9 +86,8 @@
     }
 }
 .logout-btn {
-    background: #dc3545;
     border: none;
-    color: rgb(239, 237, 237);
+    color: rgb(10, 8, 8);
     border-radius: 4px;
     cursor: pointer;
     padding: 6px 10px;

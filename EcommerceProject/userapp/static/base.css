@@ -3,7 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-.navbar-custom {
+body{
+    padding-top: 50px;
+}
+/* .navbar-custom {
     background: #0d6efd;
     padding: 0.8rem 1rem;
 }
@@ -19,19 +22,19 @@
     font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none;
-}
+} */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 12px 20px;
     background-color: rgba(208, 213, 224, 0.3);
     width:100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000; 
-    height: 45px;
+    height: 50px;
 }
 
 .nav-logo a {
@@ -68,8 +71,8 @@
         background: #444;
         width: 100%;
         position: absolute;
-        top: 60px;
-        right: 0;
+        top: 50px;
+        left: 0;
        
     }
 
@@ -87,7 +90,8 @@
 }
 .logout-btn {
     border: none;
-    color: rgb(10, 8, 8);
+    background: transparent;
+    color: rgb(243, 239, 239);
     border-radius: 4px;
     cursor: pointer;
     padding: 6px 10px;

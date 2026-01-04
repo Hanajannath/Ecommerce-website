@@ -5,21 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}MySite{% endblock %}</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     {% block extra_css %}{% endblock %}
 </head>
 
 <body>
-    <nav class="navbar-custom"></nav>
-        <div class="nav-container">
-              <div class="brand">
-                <a href="{% url 'home' %}">MySite</a>
-            </div>
-    
 
-        <ul class="nav-links" id="navLinks">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <ul class="nav-links">
 
             {% if request.user.is_authenticated %}
                 <li><a href="{% url 'home' %}">Home</a></li>
@@ -28,13 +25,13 @@
                 <li><a href="{% url 'view_profile' %}">My Profile</a></li>
                 <li><a href="{% url 'view_cart' %}">My Cart</a></li>
                 <li>
-                    <form action="{% url 'logout' %}" method="post">
-                         {% csrf_token %}
-                        <button type="submit" class="logout-btn">
-                        Logout ({{ request.user.username }})
-                         </button>
-                    </form>
-                </li>
+    <form action="{% url 'logout' %}" method="post" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit" class="logout-btn">
+            Logout ({{ request.user.username }})
+        </button>
+    </form>
+</li>
             {% else %}
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'login' %}">Login</a></li>
@@ -44,17 +41,16 @@
         </ul>
 
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        </div>
     </nav>
 
     <!-- Page Content -->
-    <main class="container mt-4">
+    <main>
         {% block content %}{% endblock %}
     </main>
 
     <script>
         function toggleMenu() {
-           document.getElementById("navLinks").classList.toggle("active");
+            document.querySelector('.nav-links').classList.toggle('active');
         }
     </script>
 

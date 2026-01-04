@@ -3,14 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    padding-top: 50px;
-}
-  .navbar-custom {
+.navbar-custom {
     background: #0d6efd;
     padding: 0.8rem 1rem;
-} 
-/* .nav-container {
+}
+.nav-container {
     max-width: 1200px;
     margin: auto;
     display: flex;
@@ -22,27 +19,27 @@ body{
     font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none;
-} */ 
-.navbar {
+}
+/* .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 20px;
+    padding: 15px 20px;
     background-color: rgba(208, 213, 224, 0.3);
     width:100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000; 
-    height: 50px;
-}
+    height: 45px;
+} */
 
-.nav-logo a {
+/* .nav-logo a {
     color: #fff;
     font-size: 22px;
     font-weight: bold;
     text-decoration: none;
-}
+} */
 
 .nav-links {
     list-style: none;
@@ -71,8 +68,8 @@ body{
         background: #444;
         width: 100%;
         position: absolute;
-        top: 50px;
-        left: 0;
+        top: 60px;
+        right: 0;
        
     }
 
@@ -89,9 +86,9 @@ body{
     }
 }
 .logout-btn {
+    background: #dc3545;
     border: none;
-    background: transparent;
-    color: rgb(243, 239, 239);
+    color: rgb(239, 237, 237);
     border-radius: 4px;
     cursor: pointer;
     padding: 6px 10px;

@@ -30,7 +30,7 @@ body{
     display: flex;
     width: 100%;
     max-width: 360px;    /* adjust as needed */  
-    background: white;
+    
 }
 .Register{
     cursor: pointer;

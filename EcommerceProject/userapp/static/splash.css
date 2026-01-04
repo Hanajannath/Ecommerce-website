@@ -1,11 +1,13 @@
 body{
-    background: #f5f5f5;
     font-family: Arial, sans-serif;
     background-image: url('welcome.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
       
 }
 .container{ 

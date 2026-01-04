@@ -10,7 +10,7 @@ body{
     background: #0d6efd;
     padding: 0.8rem 1rem;
 } 
-.nav-container {
+/* .nav-container {
     max-width: 1200px;
     margin: auto;
     display: flex;
@@ -22,7 +22,7 @@ body{
     font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none;
-} */
+} */ 
 .navbar {
     display: flex;
     justify-content: space-between;
